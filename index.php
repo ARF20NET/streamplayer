@@ -1,7 +1,4 @@
 <?php
-	if (!isset($_GET["type"]))
-		$_GET["type"] = "vid";
-	
 	$playstream = "";
 	if (!isset($_GET["stream"]))
 		$playstream = "/hls/arf20.m3u8";
@@ -103,7 +100,7 @@
 			<h3>Streams Live Now</h3>
 			<?php
 				foreach (getStreams() as $stream) {
-					echo '<a href="https://arf20.com/stream.php?stream=/hls/'.$stream.'.m3u8">'.$stream.'</a><br>';
+					echo '<a href="https://arf20.com/stream?stream=/hls/'.$stream.'.m3u8">'.$stream.'</a><br>';
 				}
 			?>
 		</div>
